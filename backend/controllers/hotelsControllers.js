@@ -21,52 +21,22 @@ export const createNewHotel = async (req, res, next) => {
 
 // ** Read
 export const getAllHotels = async (req, res, next) => {
+
+    const { min, max, ...other } = req.query;
+
     try {
-      const { featured, limit, min, max } = req.query;
-      let filter = {};
-      if (featured) {
-          filter.featured = featured;
-      }
-      if (min || min === 0) {
-          filter.cheapestPrice = {$gt: min};
-      }
-      if (max || max === 0) {
-          if (!filter.cheapestPrice) {
-              filter.cheapestPrice = {};
-          }
-          filter.cheapestPrice.$lt = max;
-      }
-      let hotels = await Hotel.find(filter);
-  
-      if (limit) {
-        hotels = hotels.slice(0, limit);
-      }
-  
-      res.status(200).json(hotels);
-    } catch (err) {
-      next(err);
+        const hotels = await Hotel.find({
+            ...other,
+            cheapestPrice: { $gt: min | 1, $lt: max || 999 }
+        }).limit(req.query.limit)
+
+        res.status(200).json(hotels)
+
     }
-  };
-
-
-
-// export const getAllHotels = async (req, res, next) => {
-
-//     const { min, max, ...other } = req.query;
-
-//     try {
-//         const hotels = await Hotel.find({
-//             ...other,
-//             cheapestPrice: { $gt: min | 1, $lt: max || 999 }
-//         }).limit(req.query.limit)
-
-//         res.status(200).json(hotels)
-
-//     }
-//     catch (err) {
-//         next(err)
-//     }
-// }
+    catch (err) {
+        next(err)
+    }
+}
 
 
 

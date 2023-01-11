@@ -104,7 +104,7 @@ function Hotel() {
 
             <div className="hotelImages">
               {
-                data.photos?.map((data, index) => (
+                data.photos?.slice(1).map((data, index) => (
                   <div className="hotelImgWarraper" key={index}>
                     <img src={data} className="hotelImg" onClick={() => handleOpen(index)} />
                   </div>

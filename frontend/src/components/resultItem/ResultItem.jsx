@@ -16,7 +16,7 @@ const ResultItem = ({item}) => {
                 <span className="resultItemDistance">{item.distance}</span>
                 <span className="resultItemTaxi">Free airport taxi</span>
                 <span className="resultItemsubtitle">Studio Apartment with Air conditioning</span>
-                <span className="resultItemsFeatures">{item.desc}</span>
+                <span className="resultItemsFeatures">{item.miniDesc}</span>
                 <span className="resultItemsCancel">Free cancellation</span>
                 <span className="resultItemsCancelSubtitle">You can cancel later, so look in this great price today!</span>
             </div>

@@ -19,11 +19,15 @@ function SearchList() {
 
   const [openDate, setOpenDate] = useState(false)
 
+
+
   const [min, setMin] = useState(undefined)
   const [max, setMax] = useState(undefined)
 
+
+
   const { data, loading, error, reFetch } = useFetch(`/hotels?city=${Destination}&min=${min || 0}&max=${max || 9999}`)
-  // console.log(data);
+
 
 
 

@@ -28,11 +28,11 @@ const hotelSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    name : {
+    desc : {
         type : String,
         required : true
     },
-    desc : {
+    miniDesc : {
         type : String,
         required : true
     },
