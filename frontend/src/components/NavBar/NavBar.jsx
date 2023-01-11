@@ -17,12 +17,12 @@ function NavBar() {
         e.preventDefault();
         dispatch({ type: "LOGOUT" });
         try {
-          localStorage.removeItem("access_token");
+            localStorage.removeItem("access_token");
         } catch (err) {
-          console.error(err);
+            console.error(err);
         }
         navigate("/");
-      };
+    };
 
     return (
         <div className="navBar">
@@ -34,7 +34,8 @@ function NavBar() {
                 {user ?
 
                     <div>
-                        <span>Imath</span>
+                        <span>{user.details.username}</span>
+
                         <button className="navButton" disabled={loading} onClick={handleClick} >Logout</button>
                     </div>
 
@@ -44,7 +45,9 @@ function NavBar() {
                         <Link to="/login" style={{ color: "inherit", textDecoration: "none" }}>
                             <button className="navButton">Login</button>
                         </Link>
-                    </div>}
+                    </div>
+                }
+                
             </div>
         </div>
     )

@@ -16,6 +16,7 @@ import { SearchContext } from '../../context/SearchContext';
 function Header({ type }) {
 
 
+
     // useState for Date
     const [Destination, setDestination] = useState("")
 
