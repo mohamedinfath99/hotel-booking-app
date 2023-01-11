@@ -36,6 +36,9 @@ const Login = () => {
   return (
     <div className="login">
       <div className="lContainer">
+
+        <h1 style={{color: "darkblue", textTransform: "uppercase", marginBottom: "50px"}}>Login Form</h1>
+      {error && <span>{error.message}</span>}
         <input
           type="text"
           placeholder="username"
@@ -53,7 +56,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Login
         </button>
-        {error && <span>{error.message}</span>}
+        
       </div>
     </div>
   );

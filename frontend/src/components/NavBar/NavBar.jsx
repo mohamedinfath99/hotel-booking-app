@@ -41,13 +41,17 @@ function NavBar() {
 
 
                     : <div className="navItem">
-                        <button className="navButton">Register</button>
+
+                        <Link to="/register" style={{ color: "inherit", textDecoration: "none" }}>
+                            <button className="navButton">Register</button>
+                        </Link>
+
                         <Link to="/login" style={{ color: "inherit", textDecoration: "none" }}>
                             <button className="navButton">Login</button>
                         </Link>
                     </div>
                 }
-                
+
             </div>
         </div>
     )
