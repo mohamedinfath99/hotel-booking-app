@@ -42,9 +42,23 @@ export const getAllHotels = async (req, res, next) => {
 export const getAllHotelss = async (req, res, next) => {
 
     try {
-        const hotels = await Hotel.find().limit(req.query.limit)
 
-        res.status(200).json(hotels)
+        const { featured, limit } = req.query;
+        let filter = {};
+        if (featured) {
+            filter.featured = featured;
+        }
+        let hotels = await Hotel.find(filter);
+
+        if (limit) {
+            hotels = hotels.slice(0, limit);
+        }
+
+        res.status(200).json(hotels);
+
+        // const hotels = await Hotel.find().limit(req.query.limit)
+
+        // res.status(200).json(hotels)
 
     }
     catch (err) {
