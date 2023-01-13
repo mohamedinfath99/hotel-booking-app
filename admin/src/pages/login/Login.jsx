@@ -6,8 +6,8 @@ import './Login.css';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
-    username: undefined,
-    password: undefined,
+    username: "",
+    password: "",
   });
 
   const { loading, error, dispatch } = useContext(AuthContext);
@@ -21,14 +21,16 @@ const Login = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
+
     try {
       const res = await axios.post("/auth/login", credentials);
-      if (res.data.isAdmin) {
+
+      if(res.data.isAdmin){
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
         navigate("/")
-      } else {
-        dispatch({ type: "LOGIN_SUCCESS", payload: {message : "your not allowed"} });
-        navigate("/")
+      }
+      else {
+        dispatch({ type: "LOGIN_FAILURE", payload: {message: "You are not allowed"} });
       }
 
     } catch (err) {
@@ -40,6 +42,9 @@ const Login = () => {
   return (
     <div className="login">
       <div className="lContainer">
+
+        <h1 style={{color: "darkblue", textTransform: "uppercase", marginBottom: "50px"}}>Login Form</h1>
+      {error && <span>{error.message}</span>}
         <input
           type="text"
           placeholder="username"
@@ -57,7 +62,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Login
         </button>
-        {error && <span>{error.message}</span>}
+        
       </div>
     </div>
   );

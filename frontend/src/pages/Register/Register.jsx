@@ -36,23 +36,19 @@ const Register = () => {
     <div className="login">
       <div className="lContainer">
         <h1 style={{ color: "darkblue", textTransform: "uppercase", marginBottom: "50px" }}>Register Form</h1>
+
+        {error && <span>{error.message}</span>}
         <input type="text" placeholder="username" id="username" onChange={handleChange} className="lInput" required/>
 
-        <input type="text" placeholder="email" id="email" onChange={handleChange}  className="lInput" required= "true" />
+        <input type="text" placeholder="email" id="email" onChange={handleChange}  className="lInput" required />
 
-        <input
-          type="password"
-          placeholder="password"
-          id="password"
-          onChange={handleChange}
-          className="lInput"
-        />
+        <input type="password" placeholder="password" id="password" onChange={handleChange} className="lInput" required/>
 
         <button onClick={handleClick} className="lButton">
           Resgister
         </button>
 
-        {error && <span>{error.message}</span>}
+        
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Reserve = ({ setOpen, hotelId }) => {
+
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
@@ -68,12 +69,11 @@ const Reserve = ({ setOpen, hotelId }) => {
   return (
     <div className="reserve">
       <div className="rContainer">
-        <FontAwesomeIcon
-          icon={faCircleXmark}
-          className="rClose"
-          onClick={() => setOpen(false)}
-        />
+
+        <FontAwesomeIcon icon={faCircleXmark} className="rClose" onClick={() => setOpen(false)} />
+
         <span>Select your rooms:</span>
+        
         {data.map((item) => (
           <div className="rItem" key={item._id}>
             <div className="rItemInfo">

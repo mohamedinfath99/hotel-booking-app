@@ -14,7 +14,7 @@ const AuthReducer = (state, action) => {
         case "LOGIN_START":
             return {
                 user: null,
-                loading: false,
+                loading: true,
                 error: null
             };
         case "LOGIN_SUCCESS":
@@ -50,16 +50,8 @@ export const AuthContextProvider = ({ children }) => {
     },[state.user])
     
 
-    return <AuthContext.Provider
-        value={{
-            user: state.user,
-            loading: state.loading,
-            error: state.error,
-            dispatch
-        }}>
-
+    return <AuthContext.Provider value={{user : state.user, loading: state.loading, error: state.error, dispatch}}>
         {children}
-
     </AuthContext.Provider>
 }
 
