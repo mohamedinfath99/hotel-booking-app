@@ -1,5 +1,5 @@
 export const userColumns = [
-  { field: "_id", headerName: "ID", width: 70 },
+  { field: "id", headerName: "ID", width: 70 },
   {
     field: "user",
     headerName: "User",
@@ -7,7 +7,7 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img className="cellImg" src={params.row.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"} alt="avatar" />
+          <img className="cellImg" src={params.row.img || "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" } alt="avatar" />
           {params.row.username}
         </div>
       );
@@ -16,57 +16,99 @@ export const userColumns = [
   {
     field: "email",
     headerName: "Email",
-    width: 230,
+    width: 250,
   },
 
   {
     field: "country",
     headerName: "Country",
-    width: 100,
+    width: 150,
   },
   {
     field: "city",
     headerName: "City",
-    width: 100,
+    width: 120,
   },
   {
     field: "phone",
     headerName: "Phone",
-    width: 100,
-  },
+    width: 140,
+  }
 ];
 
+
+
 export const hotelColumns = [
-  { field: "_id", headerName: "ID", width: 250 },
+  { field: "_id", headerName: "ID", width: 70 },
   {
     field: "name",
     headerName: "Name",
-    width: 150,
+    width: 200,
   },
+
   {
     field: "type",
     headerName: "Type",
-    width: 100,
-  },
-  {
-    field: "title",
-    headerName: "Title",
-    width: 230,
+    width: 150,
   },
   {
     field: "city",
     headerName: "City",
-    width: 100,
+    width: 230,
   },
+  {
+    field: "address",
+    headerName: "Address",
+    width: 150,
+  },
+  {
+    field: "distance",
+    headerName: "distance",
+    width: 230,
+  },
+  {
+    field: "title",
+    headerName: "title",
+    width: 230,
+  },
+  {
+    field: "desc",
+    headerName: "desc",
+    width: 230,
+  },
+  {
+    field: "miniDesc",
+    headerName: "miniDesc",
+    width: 230,
+  },
+  {
+    field: "rating",
+    headerName: "rating",
+    width: 230,
+  },
+  {
+    field: "cheapestPrice",
+    headerName: "cheapestPrice",
+    width: 230,
+  },
+  {
+    field: "featured",
+    headerName: "featured",
+    width: 230,
+  }
+
 ];
+
+
 
 export const roomColumns = [
   { field: "_id", headerName: "ID", width: 70 },
   {
-    field: "title",
+    field: "titlt",
     headerName: "Title",
-    width: 230,
+    width: 100,
   },
+
   {
     field: "desc",
     headerName: "Description",
@@ -81,5 +123,8 @@ export const roomColumns = [
     field: "maxPeople",
     headerName: "Max People",
     width: 100,
-  },
+  }
 ];
+
+
+
