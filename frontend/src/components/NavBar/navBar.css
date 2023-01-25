@@ -2,7 +2,7 @@
 
 .navBar{
     height: 70px;
-    background-color: #003580;
+    background-color: #2b1142;
     display: flex;
     justify-content: center;
 }
@@ -36,7 +36,7 @@
     padding: 5px 10px;
     cursor: pointer;
     color: white !important;
-    background-color: #003580;
+    background-color: #2b1142;
     border: 1px solid white;
     padding: 10px;
     border-radius: 20px;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;600&display=swap');
 
 .header{
-    background-color: #003580;
+    background-color: #2b1142;
     color: aliceblue;
     display: flex;
     justify-content: center;
@@ -49,13 +49,14 @@
 }
 
 .headerButton{
-    background-color: #0071c2;
-    color: white;
+    background-color: #cfc1da;
+    color: black;
     font-weight: 500;
     border: none;
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .headerSearch{

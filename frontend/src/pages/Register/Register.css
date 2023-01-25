@@ -2,6 +2,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
   }
   
@@ -31,4 +32,10 @@
   .lButton:disabled{
     background-color: #0071c28c;
     cursor: not-allowed;
+  }
+
+  .errorMsg{
+    margin-top: 50px;
+    color: red;
+    font-weight: bold;
   }

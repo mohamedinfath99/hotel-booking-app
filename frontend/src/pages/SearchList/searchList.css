@@ -14,7 +14,7 @@
 
 .searchList{
     flex: 1;
-    background-color: #febb02;
+    background-color: #2b1142;
     padding: 10px;
     border-radius: 10px;
     position: sticky;
@@ -25,7 +25,7 @@
 
 .listSearchTitle{
     font-size: 20px;
-    color: #555;
+    color: white;
     margin-bottom: 10px;
     
 }
@@ -37,11 +37,19 @@
     gap: 5px;
     margin-bottom: 10px;
     padding-bottom: 5px;
+    color: white;
 }
+
 
 
 .listSearchItem>label{
     font-size: 14px;
+    border-radius: 5px;
+}
+
+.listSearchItem>span{
+    color: black;
+    border-radius: 5px;
 }
 
 
@@ -49,6 +57,8 @@
     height: 20px;
     border: none;
     padding: 5px;
+    border-radius: 5px;
+    color: black;
 }
 
 
@@ -56,12 +66,15 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    color: #555;
+    color: white;
     font-size: 14px;
 }
 
 .listOptionInput{
     width: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 .listOption{
@@ -81,17 +94,18 @@
 
 .searchList>button{
     padding: 10px;
-    background-color: #0071c2;
-    color: white;
+    background-color: #cfc1da;
+    color: black;
     border: none;
     width: 100%;
     cursor: pointer;
     font-weight: 500;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .searchList>button:hover{
-    background-color: #003580;
+    background-color: #9e89af;
 }
 
 
