@@ -21,8 +21,8 @@
     right: 0;
     border: none;
     padding: 10px 20px;
-    background-color: #0071c2;
-    color: white;
+    background-color: #cfc1da;
+    color: black;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -30,6 +30,8 @@
 
 .hotelTitle{
     font-size: 24px;
+    text-transform: uppercase;
+    
 }
 
 
@@ -56,6 +58,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    filter: brightness(0.7);
 }
 
 
@@ -109,8 +112,8 @@
 .hotelDetailsPrice>button{
     border: none;
     padding: 10px 20px;
-    background-color: #0071c2;
-    color: white;
+    background-color: #cfc1da;
+    color: black;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -120,6 +123,7 @@
 .hotelDesc{
     font-size: 14px;
     margin-top: 20px;
+    text-transform: initial;
 }
 
 .slider{

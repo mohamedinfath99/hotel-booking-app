@@ -28,7 +28,7 @@ function Hotel() {
   const navigate = useNavigate()
 
   const { dates, options } = useContext(SearchContext)
-  console.log(dates);
+
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
   function dayDifference(date1, date2) {
@@ -91,7 +91,7 @@ function Hotel() {
           </div>}
 
           <div className="hotelWarapper">
-            <button className='bookNow'>Reserve or Book Now!</button>
+          
             <h1 className="hotelTitle">{data.name}</h1>
 
             <div className="hotelAddress">
@@ -99,8 +99,8 @@ function Hotel() {
               <span>{data.address}</span>
             </div>
 
-            <span className='hotelDistance'>Excellent Location - {data.distance}m from center</span>
-            <span className='hotelPrice'>Book a stay ${data.cheapestPrice} at this property and get a free airpot taxi</span>
+            <span className='hotelDistance'>Excellent Location - {data.distance} from center</span>
+            <span className='hotelPrice'>Book a stay Rs.{data.cheapestPrice} at this property and get a free airpot taxi</span>
 
             <div className="hotelImages">
               {
@@ -115,14 +115,14 @@ function Hotel() {
             <div className="hotelDetails">
 
               <div className="hotelDetailsTexts">
-                <h1 className="hotelTitle">{data.title}</h1>
+                <h1 className="hotelTitle"><u>{data.title}</u></h1>
                 <p className='hotelDesc'>{data.desc}</p>
               </div>
 
               <div className="hotelDetailsPrice">
                 <h1>Perfect for a {days}-night stay!</h1>
                 <span>Located in the real heart of karakow, this propthy has an excellent location score of 9.8</span>
-                <h2><b>${days * data.cheapestPrice * options.room}</b>({days})</h2>
+                <h2><b>Rs. {days * data.cheapestPrice * options.room}</b>({days})</h2>
                 <button onClick={handleClick}>Reserve or Book Now!</button>
               </div>
             </div>
