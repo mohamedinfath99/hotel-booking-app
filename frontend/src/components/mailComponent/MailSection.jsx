@@ -4,7 +4,7 @@ import './mailSection.css'
 const MailSection = () => {
   return (
     <div className="mail">
-      <h1 className="mailTitle">Save time, save money!</h1>
+      <h1 className="mailTitle">Save time, Save money!</h1>
       <span className="mailDes">Sign up and we'll send the best deals to you</span>
 
       <div className="mailInput">

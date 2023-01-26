@@ -30,7 +30,7 @@ const ResultItem = ({item}) => {
                 </div>}
 
                 <div className="searchDetailsTexts">
-                    <span className="searchPrice">${item.cheapestPrice}</span>
+                    <span className="searchPrice">Rs.{item.cheapestPrice}</span>
                     <span className="searchTax">Includes taxes and fees</span>
 
                     <Link to={`/hotels/${item._id}`}>

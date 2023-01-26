@@ -9,6 +9,7 @@ import { Link } from "react-router-dom"
 function NavBar() {
 
     const { user, loading, error, dispatch } = useContext(AuthContext)
+    // console.log(user);
 
     const navigate = useNavigate()
 
@@ -34,7 +35,7 @@ function NavBar() {
                 {user ?
 
                     <div>
-                        <span>{user.details.username}</span>
+                        <span className="navButton">{user.username}</span>
 
                         <button className="navButton" disabled={loading} onClick={handleClick} >Logout</button>
                     </div>

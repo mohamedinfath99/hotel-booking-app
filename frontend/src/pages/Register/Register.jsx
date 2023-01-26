@@ -35,21 +35,32 @@ const Register = () => {
   return (
     <div className="login">
       <div className="lContainer">
-        <h1 style={{ color: "darkblue", textTransform: "uppercase", marginBottom: "50px" }}>Register Form</h1>
+        <h1 className="heading">Register Form</h1>
 
-        {error && <span>{error.message}</span>}
-        <input type="text" placeholder="username" id="username" onChange={handleChange} className="lInput" required/>
 
-        <input type="text" placeholder="email" id="email" onChange={handleChange}  className="lInput" required />
 
-        <input type="password" placeholder="password" id="password" onChange={handleChange} className="lInput" required/>
+        <input type="text" placeholder="username" id="username" onChange={handleChange} className="lInput" required />
+
+        <input type="email" placeholder="email" id="email" onChange={handleChange} className="lInput" required />
+
+        <input type="text" placeholder="country" id="country" onChange={handleChange} className="lInput" required />
+
+        <input type="text" placeholder="city" id="city" onChange={handleChange} className="lInput" required />
+
+        <input type="text" placeholder="phone" id="phone" onChange={handleChange} className="lInput" required />
+
+        <input type="password" placeholder="password" id="password" onChange={handleChange} className="lInput" required />
 
         <button onClick={handleClick} className="lButton">
           Resgister
         </button>
 
-        
+
       </div>
+      <div className="errorMsg">
+        {error && <span>{error.message}</span>}
+      </div>
+
     </div>
   );
 };

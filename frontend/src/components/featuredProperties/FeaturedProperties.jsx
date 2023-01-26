@@ -5,7 +5,6 @@ import './featuredProperties.css'
 const FeaturedProperties = () => {
 
     const { data, loading, error } = useFetch("/hotels/guest?featured=true&limit=4")
-    console.log(data);
 
     return (
         <div className="FeaturedProperties">
@@ -18,7 +17,7 @@ const FeaturedProperties = () => {
                             <img src={item.photos[0]} alt='image1' className='FeaturedPropertiesImg' />
                             <span className="FeaturedPropertiesName">{item.name}</span>
                             <span className="FeaturedPropertiesCity">{item.city}</span>
-                            <span className="FeaturedPropertiesPrice">Starting from ${item.cheapestPrice}</span>
+                            <span className="FeaturedPropertiesPrice">Starting from Rs.{item.cheapestPrice}</span>
                             {item.rating && <div className="FeaturedPropertiesRating">
                                 <button>{item.rating}</button>
                                 <span>Excellent</span>

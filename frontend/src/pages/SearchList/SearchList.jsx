@@ -111,14 +111,6 @@ function SearchList() {
 
             }
 
-
-
-
-
-
-
-
-
           </div>
         </div>
       </div>

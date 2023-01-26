@@ -30,6 +30,8 @@ const Reserve = ({ setOpen, hotelId }) => {
     return dates;
   };
 
+
+
   const alldates = getDatesInRange(dates[0].startDate, dates[0].endDate);
 
   const isAvailable = (roomNumber) => {

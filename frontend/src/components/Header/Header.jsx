@@ -107,7 +107,7 @@ function Header({ type }) {
                     <>
                         <h1 className="headerTitle"> A life time of discounts ? It's Genius.</h1>
                         <p className="headerDesc">Get rewaeded for your travels - unlock instant savings of 10% or more with a free Trippy account</p>
-                        {!user && <button className="headerButton">Sign in / Register</button>}
+                        
 
                         <div className="headerSearch">
 
