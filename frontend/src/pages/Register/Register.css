@@ -22,8 +22,6 @@
   .lButton {
     border: none;
     padding: 10px 20px;
-    background-color: #0071c2;
-    color: white;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -36,6 +34,6 @@
 
   .errorMsg{
     margin-top: 50px;
-    color: red;
+    color: rgb(237, 231, 231);
     font-weight: bold;
   }

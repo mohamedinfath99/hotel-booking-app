@@ -1,5 +1,5 @@
 .mail{
-    background-color: #003580;
+    background-color: #2b1142;
     width: 100%;
     display: flex;
     margin-top: 50px;
@@ -8,6 +8,7 @@
     align-items: center;
     gap: 20px;
     padding: 50px;
+   
     
 }
 
@@ -23,8 +24,8 @@
 
 .mailInput>button{
     height: 40px;
-    background-color: #0071c2;
-    color: white;
+    background-color: #cfc1da;
+    color: black;
     border: none;
     padding: 10px;
     border-radius: 5px;
