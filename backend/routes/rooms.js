@@ -15,7 +15,7 @@ router.get('/:id/:hotelid', getRoom)
 
 // Upadte
 router.patch('/:id/:hotelid', verifyAdmin, updateRoom);
-router.patch('/availability/:id', updateRoomAvailability)
+router.put('/availability/:id', updateRoomAvailability)
 
 // Delete
 router.delete('/:id/:hotelid', verifyAdmin, deleteRoom)

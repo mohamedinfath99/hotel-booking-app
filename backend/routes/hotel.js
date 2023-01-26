@@ -8,11 +8,13 @@ const router = express.Router();
 
 
 router.post('/', verifyAdmin, createNewHotel)
-router.get('/', getAllHotels)
-router.get('/find/:id', getHotel)
 router.patch('/:id', verifyAdmin, updateHotels)
 router.delete('/:id', verifyAdmin, deleteHotels)
+router.get('/find/:id', getHotel)
+
+router.get('/', getAllHotels)
 router.get('/guest', getAllHotelss)
+
 router.get("/countByCity", countByCity)
 router.get("/countByType", countByType)
 router.get("/room/:id", getHotelRooms)
