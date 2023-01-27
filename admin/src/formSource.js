@@ -1,7 +1,7 @@
 export const userInputs = [
   {
     id: 1,
-    label: "Username",
+    label: "username",
     type: "text",
     placeholder: "john_doe",
   },
@@ -13,7 +13,7 @@ export const userInputs = [
   },
   {
     id: 3,
-    label: "Email",
+    label: "email",
     type: "mail",
     placeholder: "john_doe@gmail.com",
   },
@@ -36,7 +36,7 @@ export const userInputs = [
   },
   {
     id: 7,
-    label: "Country",
+    label: "country",
     type: "text",
     placeholder: "USA",
   },
@@ -77,3 +77,7 @@ export const productInputs = [
     placeholder: "in stock",
   },
 ];
+
+
+
+// 3.17.25

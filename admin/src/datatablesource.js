@@ -1,3 +1,4 @@
+
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
@@ -41,32 +42,6 @@ export const userColumns = [
 export const hotelColumns = [
   { field: "_id", headerName: "ID", width: 70 },
   {
-    field: "name",
-    headerName: "Name",
-    width: 200,
-  },
-
-  {
-    field: "type",
-    headerName: "Type",
-    width: 150,
-  },
-  {
-    field: "city",
-    headerName: "City",
-    width: 230,
-  },
-  {
-    field: "address",
-    headerName: "Address",
-    width: 150,
-  },
-  {
-    field: "distance",
-    headerName: "distance",
-    width: 230,
-  },
-  {
     field: "title",
     headerName: "title",
     width: 230,
@@ -75,26 +50,6 @@ export const hotelColumns = [
     field: "desc",
     headerName: "desc",
     width: 230,
-  },
-  {
-    field: "miniDesc",
-    headerName: "miniDesc",
-    width: 230,
-  },
-  {
-    field: "rating",
-    headerName: "rating",
-    width: 230,
-  },
-  {
-    field: "cheapestPrice",
-    headerName: "cheapestPrice",
-    width: 230,
-  },
-  {
-    field: "featured",
-    headerName: "featured",
-    width: 230,
   }
 
 ];
@@ -102,27 +57,21 @@ export const hotelColumns = [
 
 
 export const roomColumns = [
-  { field: "_id", headerName: "ID", width: 70 },
-  {
-    field: "titlt",
-    headerName: "Title",
-    width: 100,
-  },
-
+  { field: "_id", headerName: "ID", width: 300 },
   {
     field: "desc",
     headerName: "Description",
-    width: 200,
+    width: 400,
   },
   {
     field: "price",
     headerName: "Price",
-    width: 100,
+    width: 150,
   },
   {
     field: "maxPeople",
     headerName: "Max People",
-    width: 100,
+    width: 150,
   }
 ];
 
